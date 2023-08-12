@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/kcal-app-react/static/css/main.c124b6f8.css",
+    "main.js": "/kcal-app-react/static/js/main.f55411fb.js",
+    "index.html": "/kcal-app-react/index.html",
+    "main.c124b6f8.css.map": "/kcal-app-react/static/css/main.c124b6f8.css.map",
+    "main.f55411fb.js.map": "/kcal-app-react/static/js/main.f55411fb.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c124b6f8.css",
+    "static/js/main.f55411fb.js"
+  ]
+}
