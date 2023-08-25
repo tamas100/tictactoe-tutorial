@@ -9,7 +9,7 @@ function Square({ value, onSquareClick }) {
   );
 }
 
-function Board(xIsNext, squares, onPlay) {
+function Board({ xIsNext, squares, onPlay }) {
   function handleClick(i) {
     if (squares[i] || calculateWinner(squares)) return;
     const nextSquares = squares.slice();
@@ -41,7 +41,7 @@ function Board(xIsNext, squares, onPlay) {
     </>
   );
 
-  function calculateWinner(squaers) {
+  function calculateWinner(squares) {
     const lines = [
       [0, 1, 2],
       [3, 4, 5],
@@ -54,8 +54,8 @@ function Board(xIsNext, squares, onPlay) {
     ];
     for (let i = 0; i < lines.length; i++) {
       const [a, b, c] = lines[i];
-      if (squaers[a] && squaers[a] === squaers[b] && squaers[a] === squaers[c]) {
-        return squaers[a];
+      if (squares[a] && squares[a] === squares[b] && squares[a] === squares[c]) {
+        return squares[a];
       }
     }
     return null;
@@ -75,7 +75,7 @@ export default function Game() {
   return (
     <div className='game'>
       <div className='game-board'>
-        <Board xIsNext={xIsNext} squaers={currentSquares} onPlay={handlePlay} />
+        <Board xIsNext={xIsNext} squares={currentSquares} onPlay={handlePlay} />
       </div>
       <div className='game-info'>
         <ol>{/*TODO*/}</ol>
