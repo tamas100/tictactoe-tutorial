@@ -107,3 +107,8 @@ body {
 .game-info {
   margin-left: 20px;
 }
+
+.reverse {
+  display: flex;
+  flex-direction: column-reverse;
+}

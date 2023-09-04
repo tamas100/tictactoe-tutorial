@@ -96,13 +96,20 @@ export default function Game() {
     )
   })
 
+  let historyList = document.getElementById('history-list');
+
+  function flipList() {
+    historyList.classList.toggle('reverse');
+  }
+
   return (
     <div className='game'>
       <div className='game-board'>
         <Board xIsNext={xIsNext} squares={currentSquares} onPlay={handlePlay} />
       </div>
       <div className='game-info'>
-        <ul>{moves}</ul>
+        <button onClick={() => flipList()}>Flip list</button>
+        <ul id='history-list'>{moves}</ul>
       </div>
     </div>
   );
